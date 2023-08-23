@@ -23,11 +23,12 @@ pipeline {
         }
         stage ('Third task') {
             steps {
-                echo "${ENV}"
                 sh '''echo Jenkins is Ready
-                    ls -ltra
-                    pwd
-                    ps -ef | grep Jenkins'''
+                      ps -ef | grep Jenkins
+                      ls -ltra
+                      pwd
+                      echo "${ENV}"
+                   '''
             }
         }
     }
