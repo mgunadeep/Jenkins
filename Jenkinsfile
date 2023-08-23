@@ -1,8 +1,8 @@
 pipeline {
     agent any
 
-    environment{
-    ENV= "www.twitter.com"
+    environment {
+    ENV = "www.twitter.com"
     }
 
     stages {
