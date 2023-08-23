@@ -1,9 +1,11 @@
 pipeline {
     agent any
+    ENV = "www.twitter.com"
     stages {
         stage ('first task') {
             steps {
              echo "Introduction to Jenkins"
+             echo ${ENV}
             }
         }
         stage ('Second task') {
