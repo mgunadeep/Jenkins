@@ -13,8 +13,12 @@ pipeline {
             }
         }
         stage ('Second task') {
+            environment {
+                ENV = "www.facebook.com"
+            }
             steps {
                 echo "Configuring a Jenkinsfile"
+                echo "${ENV}"
             }
         }
         stage ('Third task') {
