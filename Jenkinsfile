@@ -31,9 +31,6 @@ pipeline {
                 ENV = "www.facebook.com"   // Stage variable
             }
             steps {
-                env
-
-                
                 echo "Configuring a Jenkinsfile"
                 echo "${ENV}"
             }
@@ -45,6 +42,8 @@ pipeline {
                       ls -ltra
                       pwd
                       echo "${ENV}"
+
+                      env
                    '''
             }
         }
