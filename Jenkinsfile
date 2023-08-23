@@ -24,6 +24,7 @@ pipeline {
             steps {
              echo "Introduction to Jenkins"
              echo "${ENV}"
+             env
             }
         }
         stage ('Second task') {
