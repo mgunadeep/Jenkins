@@ -24,8 +24,8 @@
 
 pipeline {
     agent any
-    stage {
-        stage ('first task'){
+    stages {
+        stage ('first task') {
             steps {
              echo "Introduction to Jenkins"
             }
