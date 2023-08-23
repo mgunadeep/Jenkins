@@ -1,8 +1,10 @@
 pipeline {
     agent any
+    
     environment {
     ENV= "www.twitter.com"
     }
+
     stages {
         stage ('first task') {
             steps {
