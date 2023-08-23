@@ -24,7 +24,6 @@ pipeline {
             steps {
              echo "Introduction to Jenkins"
              echo "${ENV}"
-             env
             }
         }
         stage ('Second task') {
@@ -32,6 +31,9 @@ pipeline {
                 ENV = "www.facebook.com"   // Stage variable
             }
             steps {
+                env
+
+                
                 echo "Configuring a Jenkinsfile"
                 echo "${ENV}"
             }
