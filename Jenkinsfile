@@ -30,6 +30,11 @@ pipeline {
              echo "Introduction to Jenkins"
             }
         }
+        stage ('Second task') {
+            steps {
+                echo "Configuring a Jenkinsfile"
+            }
+        }
     }
 }
 
