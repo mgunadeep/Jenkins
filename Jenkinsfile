@@ -26,16 +26,15 @@ pipeline {
                 sh '''echo Jenkins is Ready
                     ls -ltra
                     pwd
-                    ps -ef | grep Jenkins
+                    ps -ef | grep Jenkins'''
                     echo "${ENV}"
-                    '''
             }
         }
     }
 }
 
 
-// 
+//
 
 
 
