@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-    ENV = "www.twitter.com"  #pipeline variable 
+    ENV = "www.twitter.com"  // Pipeline variable 
     }
 
     stages {
@@ -14,7 +14,7 @@ pipeline {
         }
         stage ('Second task') {
             environment {
-                ENV = "www.facebook.com"   #
+                ENV = "www.facebook.com"   // Stage variable
             }
             steps {
                 echo "Configuring a Jenkinsfile"
@@ -34,7 +34,7 @@ pipeline {
 }
 
 
-
+// 
 
 
 
