@@ -13,7 +13,7 @@ pipeline {
         }
         stage ('Third task') {
             steps {
-                sh '''echo Hello world
+                sh '''echo Jenkins is Ready
                     ls -ltra
                     pwd
                     ps -ef | grep Jenkins'''
