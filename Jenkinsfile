@@ -31,11 +31,18 @@ pipeline {
                    '''
             }
         }
+        stage ('Fourth task') {
+            steps {
+                sh '''echo -e "\\e[32m Hello world \\e[0m"
+                      echo -e "\\e[36m I love this color \\e[0m"
+                   '''
+            }
+        }
     }
 }
 
 
-//
+// Here, the Stage(local) Variables > Pipeline(global) Variales, 
 
 
 
