@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    
-    environment {
+
+    environment{
     ENV= "www.twitter.com"
     }
 
