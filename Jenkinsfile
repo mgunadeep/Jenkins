@@ -6,10 +6,7 @@ pipeline {
     SSHCRED= ('SSH_CRED')
 
     }
-     
-    
     triggers { cron('H 1 * * 8 *') }
-
     stages {
         stage ('first task') {
             steps {
