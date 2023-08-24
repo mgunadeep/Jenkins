@@ -10,8 +10,8 @@ pipeline {
     stages {
         stage ('first task') {
             steps {
-             echo "Introduction to Jenkins"
-             echo "${ENV}"
+            echo "Introduction to Jenkins"
+            echo "${ENV}"
             }
         }
         stage ('Second task') {
@@ -26,20 +26,20 @@ pipeline {
         stage ('Third task') {
             steps {
                 sh '''echo Jenkins is Ready
-                      ps -ef | grep Jenkins
-                      ls -ltra
-                      pwd
-                      echo "${ENV}"
+                    ps -ef | grep Jenkins
+                    ls -ltra
+                    pwd
+                    echo "${ENV}"
 
-                      env
-                   '''
+                    env
+                '''
             }
         }
         stage ('Fourth task') {
             steps {
                 sh '''echo -e "\\e[32m Hello world \\e[0m"
-                      echo -e "\\e[36m I love this color \\e[0m"
-                   '''
+                    echo -e "\\e[36m I love this color \\e[0m"
+                '''
             }
         }
     }
