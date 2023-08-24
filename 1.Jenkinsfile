@@ -3,7 +3,6 @@ pipeline {
     environment {
         CAR= "488 GTB"
         NAME= "GUNA"
-        
     }
     stages {
         stage ('First task') {
@@ -13,7 +12,9 @@ pipeline {
             }
         }
         stage ('Second task') {
+            environment {
             CAR= "TAYCAN"
+            }
             steps {
                 echo "Hello "${NAME}", this is your "${CAR}" "
             }
