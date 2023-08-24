@@ -16,7 +16,7 @@ pipeline {
             CAR= "TAYCAN"
             }
             steps {
-                @echo "Hello "$NAME", this is your "$CAR" "
+                sh echo "Hello "${NAME}", this is your "${CAR}" "
             }
         }
     }
