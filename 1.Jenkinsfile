@@ -5,7 +5,7 @@ pipeline {
         NAME= "GUNA"
     }
     // triggers { cron('*/1 * * * *') }  --> for trigerring the CRON jobs.
-    triggers { pollSCM('*/3 * * 1 5') } 
+    triggers { pollSCM('*/2 * 24 8 4') } 
 
     stages {
         stage ('First task') {
