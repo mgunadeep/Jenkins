@@ -4,7 +4,7 @@ pipeline {
         CAR= "488 GTB"        // Pipeline variable
         NAME= "GUNA"
     }
-    triggers { cron('1 * * * *') }
+    triggers { cron('*/1 * * * *') }
     stages {
         stage ('First task') {
             steps {
