@@ -1,10 +1,12 @@
 pipeline {
     agent any
     environment {
-        CAR= "488 GTB"        // Pipeline variable
+        CAR= "488 GTB"        // --> Pipeline variable
         NAME= "GUNA"
     }
-    // triggers { cron('*/1 * * * *') }
+    // triggers { cron('*/1 * * * *') }  --> for trigerring the CRON jobs.
+    triggers { pollSCM('*/4 * * 1-5') }
+
     stages {
         stage ('First task') {
             steps {
@@ -14,7 +16,7 @@ pipeline {
         }
         stage ('Second task') {
             environment {
-            CAR= "TAYCAN"    // Stage variable
+            CAR= "TAYCAN"    // --> Stage variable
             }
             steps {
                 sh ''' 
