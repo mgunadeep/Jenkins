@@ -5,7 +5,7 @@ pipeline {
         NAME= "GUNA"
     }
     // triggers { cron('*/1 * * * *') }  --> for triggering the CRON jobs.
-    // triggers { pollSCM('*/2 * 24 8 4') } --> for trigerring the pipelinejobs, if any git commits are done in the interval of every 2 minutes.
+    triggers { pollSCM('*/2 * 24 8 4') } // --> for trigerring the pipelinejobs, if any git commits are done in the interval of every 2 minutes.
 
     stages {
         stage ('First task') {
