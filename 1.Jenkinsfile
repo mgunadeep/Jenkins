@@ -1,14 +1,21 @@
 pipeline {
     agent any
     environment {
-        ENV= "488 GTB"
+        CAR= "488 GTB"
+        NAME= "GUNA"
         
     }
     stages {
         stage ('First task') {
             steps {
                 echo "Hello World"
-                echo "${ENV}"
+                echo "${CAR}"
+            }
+        }
+        stage ('Second task') {
+            CAR= "TAYCAN"
+            steps {
+                echo "Hello "${NAME}", this is your "${CAR}" "
             }
         }
     }
