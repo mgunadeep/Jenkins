@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        CAR= "488 GTB"        // --> Pipeline variable
+        CAR= "488-GTB"        // --> Pipeline variable
         NAME= "GUNA"
     }
     // triggers { cron('*/1 * * * *') }  --> for triggering the CRON jobs.
