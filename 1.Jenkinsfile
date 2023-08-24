@@ -16,9 +16,12 @@ pipeline {
             CAR= "TAYCAN"
             }
             steps {
-                sh '''echo "Hello "${NAME}", this is your "${CAR}" "
+                sh ''' 
+                echo "Hello "${NAME}", this is your "${CAR}" "
+                ls -ltr
+                pwd
                     '''
-        }
+                }
         }
     }
 }
