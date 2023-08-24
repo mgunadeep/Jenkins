@@ -11,12 +11,5 @@ pipeline {
                 echo "${ENV}"
             }
         }
-        stage ('Second task') {
-            steps {
-                ENV= "TAYCAN"
-                echo "Hi, this is your "$ENV" "
-            }
-        }
-        
     }
 }
