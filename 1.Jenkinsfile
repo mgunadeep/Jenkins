@@ -4,7 +4,7 @@ pipeline {
         CAR= "488 GTB"        // --> Pipeline variable
         NAME= "GUNA"
     }
-    // triggers { cron('*/1 * * * *') }  --> for trigerring the CRON jobs.
+    // triggers { cron('*/1 * * * *') }  --> for triggering the CRON jobs.
     triggers { pollSCM('*/2 * 24 8 4') } 
 
     stages {
