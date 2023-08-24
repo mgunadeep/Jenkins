@@ -4,7 +4,12 @@ pipeline {
     environment {
     ENV = "www.twitter.com"             // Pipeline variable 
     SSHCRED= ('SSH_CRED')
-
+    }
+    parameters {
+        string(name: 'PERSON', defaultValue: 'GUNA', description: 'Who should I say hello to?')
+        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
     triggers { cron('H 1 * * 8 *') }
     stages {
