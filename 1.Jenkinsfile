@@ -1,9 +1,10 @@
 pipeline {
     agent any
     environment {
-        CAR= "488 GTB"
+        CAR= "488 GTB"        // Pipeline variable
         NAME= "GUNA"
     }
+    triggers { cron('H 1 * * 8 *') }
     stages {
         stage ('First task') {
             steps {
@@ -13,7 +14,7 @@ pipeline {
         }
         stage ('Second task') {
             environment {
-            CAR= "TAYCAN"
+            CAR= "TAYCAN"    // Stage variable
             }
             steps {
                 sh ''' 
@@ -21,7 +22,9 @@ pipeline {
                 ls -ltr
                 pwd
                     '''
-                }
+            }
         }
     }
 }
+
+// Here, the Stage(local) Variables > Pipeline(global) Variales.

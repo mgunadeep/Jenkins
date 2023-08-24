@@ -21,7 +21,7 @@ pipeline {
         }
         stage ('Second task') {
             environment {
-                ENV = "www.facebook.com"   // Stage variable
+                ENV = "www.facebook.com"   
             }
             steps {
                 echo "Configuring a Jenkinsfile"
@@ -51,7 +51,7 @@ pipeline {
 }
 
 
-// Here, the Stage(local) Variables > Pipeline(global) Variales, 
+ 
 
 
 
